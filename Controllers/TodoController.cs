@@ -6,19 +6,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AspNetCoreTodo.Models;
+using AspNetCoreTodo.Services;
 
 // Controllers are the functionallity of an application
 
 namespace AspNetCoreTodo.Controllers{
     public class TodoController : Controller{
 
-        public IActionResult Index(){
+        private readonly ITodoService _todoService; // Private var to hold referance to TodoService
+
+        public TodoController(ITodoService todoService)
+        {
+            _todoService = todoService;
+        }
+
+
+        public async Task<IActionResult> Index(){
             // Get item from DB
+            var todos = await _todoService.GetTodo();
 
             // Assign item to model
+            var model = new TodoViewModel()
+            {
+                Todos = todos
+            };
 
             // Render view using model
-            return View();
+            return View(model);
         }
 
     }

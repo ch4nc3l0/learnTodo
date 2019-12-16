@@ -2,6 +2,6 @@
 
 namespace AspNetCoreTodo.Models{
     public class TodoViewModel{
-        public Todo[] Items { get; set; }
+        public Todo[] Todos { get; set; }
     }
 }
