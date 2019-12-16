@@ -4,6 +4,29 @@
     ViewData["Title"] = "Manage your todo list";
 }
 
-<div class="panel panel-default todo-panel">
-    <div></div>
-</div>
+    <div class="panel panel-default todo-panel">
+        <div class="panel-heading">@ViewData["Title"]</div> <!-- Show title from viewdata line 4-->
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>&#x2714;</td>
+                    <td>Item</td>
+                    <td>Due</td>
+                </tr>
+            </thead>
+            @foreach (var todo in Model.Items)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" class="done-checkbox" />
+                    </td>
+                    <td>@todo.Title</td>
+                    <td>@todo.DueAt</td>
+                </tr>
+            }
+        </table>
+        <div class="panel-footer add-item-form">
+            <!-- TODO: Add item form -->
+        </div>
+    </div>
