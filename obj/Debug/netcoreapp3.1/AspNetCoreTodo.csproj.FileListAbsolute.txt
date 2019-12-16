@@ -70,3 +70,4 @@ C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\AspN
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\AspNetCoreTodo.csproj.CopyComplete
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\AspNetCoreTodo.dll
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\AspNetCoreTodo.pdb
+C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\Razor\Views\Todo\Index.cshtml.g.cs

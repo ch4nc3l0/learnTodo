@@ -20506,6 +20506,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ch4nc\\Coding\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Todo\\Index.cshtml",
+      "TargetPath": "Views\\Todo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ch4nc\\Coding\\AspNetCoreTodo\\AspNetCoreTodo\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
