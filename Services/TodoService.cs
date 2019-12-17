@@ -27,5 +27,17 @@ namespace AspNetCoreTodo.Services
                 .ToArrayAsync();
         }
 
+        public async Task<bool> AddTodo(Todo newTodo)
+        {
+            newTodo.Id = Guid.NewGuid();
+            newTodo.IsDone = false;
+            newTodo.DueAt = DateTimeOffset.Now.AddDays(2);
+
+            _context.Todos.Add(newTodo);
+
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult == 1;
+        }
+
     }
 }
