@@ -20,7 +20,10 @@
             {
                 <tr>
                     <td>
-                        <input type="checkbox" class="done-checkbox" />
+                        <form asp-action="MarkDone" method="post">
+                            <input type="checkbox" class="done-checkbox" />
+                            <input type="hidden" name="id" value="@todo.Id" />
+                        </form>
                     </td>
                     <td>@todo.Title</td>
                     <td>@todo.DueAt.Humanize()</td>
