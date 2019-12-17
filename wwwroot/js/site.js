@@ -5,16 +5,16 @@
 $(document).ready(function () {
 
     $('.done-checkbox').on('click', function (e) {
-        markComplete(e.target);
+        markCompleted(e.target);
     });
 });
 
 function markCompleted(checkbox) {
     checkbox.disabled = true;
 
-    let row = checkbox.closest('tr');
-    $row.addClass('done');
+    var row = checkbox.closest('tr');
+    $(row).addClass('done');
 
-    let form = checkbox.closest('form');
+    var form = checkbox.closest('form');
     form.submit();
 }

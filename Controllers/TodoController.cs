@@ -51,5 +51,20 @@ namespace AspNetCoreTodo.Controllers{
 
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> MarkDone(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var successful = await _todoService.MarkDone(id);
+            if (!successful)
+            {
+                return BadRequest("Could not mark todo done");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
