@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreTodo.Models
 {
-    public class ApplicationUser : IdentityUser
-    {
+   // public class IdentityUser : IdentityUser
+    //{
         
-    }
+   // }
 }

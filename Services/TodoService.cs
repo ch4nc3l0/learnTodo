@@ -1,5 +1,6 @@
 ﻿using AspNetCoreTodo.Data;
 using AspNetCoreTodo.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -20,18 +21,19 @@ namespace AspNetCoreTodo.Services
         }
         
         // Return var with data
-        public async Task<Todo[]> GetTodo(ApplicationUser user)
+        public async Task<Todo[]> GetTodo(IdentityUser user)
         {
             return await _context.Todos
                 .Where(x => x.IsDone == false && x.UserId == user.Id)
                 .ToArrayAsync();
         }
 
-        public async Task<bool> AddTodo(Todo newTodo)
+        public async Task<bool> AddTodo(Todo newTodo, IdentityUser user)
         {
             newTodo.Id = Guid.NewGuid();
             newTodo.IsDone = false;
             newTodo.DueAt = DateTimeOffset.Now.AddDays(2);
+            newTodo.UserId = user.Id;
 
             _context.Todos.Add(newTodo);
 
@@ -39,10 +41,10 @@ namespace AspNetCoreTodo.Services
             return saveResult == 1;
         }
 
-        public async Task<bool> MarkDone(Guid id)
+        public async Task<bool> MarkDone(Guid id, IdentityUser user)
         {
             var todo = await _context.Todos
-                .Where(x => x.Id == id)
+                .Where(x => x.Id == id && x.UserId == user.Id)
                 .SingleOrDefaultAsync();
 
             if (todo == null)

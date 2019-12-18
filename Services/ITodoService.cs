@@ -1,4 +1,5 @@
 ﻿using AspNetCoreTodo.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace AspNetCoreTodo.Services // This interface will be interacting with the
 {
     public interface ITodoService
     {
-        Task<Todo[]> GetTodo( ApplicationUser user); // Defining an async method to get todos from the database
+        Task<Todo[]> GetTodo( IdentityUser user); // Defining an async method to get todos from the database
 
-        Task<bool> AddTodo(Todo newTodo);
+        Task<bool> AddTodo(Todo newTodo, IdentityUser user);
 
-        Task<bool> MarkDone(Guid id);
+        Task<bool> MarkDone(Guid id, IdentityUser user);
     }
 }

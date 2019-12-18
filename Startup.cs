@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AspNetCoreTodo.Services;
+using AspNetCoreTodo.Models;
 
 namespace AspNetCoreTodo
 {
@@ -36,6 +37,7 @@ namespace AspNetCoreTodo
             services.AddControllersWithViews();
            services.AddRazorPages();
             services.AddScoped<ITodoService, TodoService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
