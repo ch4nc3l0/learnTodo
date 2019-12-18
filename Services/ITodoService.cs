@@ -8,7 +8,7 @@ namespace AspNetCoreTodo.Services // This interface will be interacting with the
 {
     public interface ITodoService
     {
-        Task<Todo[]> GetTodo(); // Defining an async method to get todos from the database
+        Task<Todo[]> GetTodo( ApplicationUser user); // Defining an async method to get todos from the database
 
         Task<bool> AddTodo(Todo newTodo);
 

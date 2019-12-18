@@ -20,10 +20,10 @@ namespace AspNetCoreTodo.Services
         }
         
         // Return var with data
-        public async Task<Todo[]> GetTodo()
+        public async Task<Todo[]> GetTodo(ApplicationUser user)
         {
             return await _context.Todos
-                .Where(x => x.IsDone == false)
+                .Where(x => x.IsDone == false && x.UserId == user.Id)
                 .ToArrayAsync();
         }
 
