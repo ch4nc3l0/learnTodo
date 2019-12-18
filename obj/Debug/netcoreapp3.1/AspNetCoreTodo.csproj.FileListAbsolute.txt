@@ -188,3 +188,4 @@ C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-C
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-Hans\Humanizer.resources.dll
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\netcoreapp3.1\zh-Hant\Humanizer.resources.dll
 C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\Razor\Views\Todo\AddTodoPartial.cshtml.g.cs
+C:\Users\ch4nc\Coding\AspNetCoreTodo\AspNetCoreTodo\obj\Debug\netcoreapp3.1\Razor\Views\ManageUsers\Index.cshtml.g.cs
